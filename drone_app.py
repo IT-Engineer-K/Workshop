@@ -171,8 +171,8 @@ def index():
     const y_element = document.getElementById('y');
 
     function send_accel(event) {
-        const x = Math.round(event.accelerationIncludingGravity.x * 100)
-        const y = Math.round(event.accelerationIncludingGravity.y * 100)
+        const x = Math.round(event.accelerationIncludingGravity.x * 10)
+        const y = Math.round(event.accelerationIncludingGravity.y * 10)
         x_element.textContent = x;
         y_element.textContent = y;
         fetch(`api/${x}_${y}`);
