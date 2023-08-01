@@ -195,7 +195,7 @@ def api(state):
     return ''
 
 @app.route('/takeoff')
-def takeoff(state):
+def takeoff():
     sent = sock.sendto('takeoff'.encode(encoding="utf-8"), TELLO_ADDRESS)
     return ''
 
