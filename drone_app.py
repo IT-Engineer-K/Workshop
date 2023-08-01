@@ -200,7 +200,7 @@ def takeoff():
     return ''
         
 @app.route('/land')
-def takeoff():
+def land():
     sent = sock.sendto('land'.encode(encoding="utf-8"), TELLO_ADDRESS)
     return ''
         
