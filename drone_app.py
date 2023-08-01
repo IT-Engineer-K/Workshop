@@ -198,7 +198,12 @@ def api(state):
 def takeoff():
     sent = sock.sendto('takeoff'.encode(encoding="utf-8"), TELLO_ADDRESS)
     return ''
-
+        
+@app.route('/land')
+def takeoff():
+    sent = sock.sendto('land'.encode(encoding="utf-8"), TELLO_ADDRESS)
+    return ''
+        
 app.run(port=12345)
 
 # ビデオストリーミング停止
